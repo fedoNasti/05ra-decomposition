@@ -1,14 +1,18 @@
+import HeaderItem from "./HeaderItem";
+
 /**
  * Шапка страницы: рубрики (СМИ, Германия, Рекомендуем) и текущее время.
  * @param {Object} props
  * @param {string} props.date - дата в формате "31 июля, среда"
  * @param {string} props.time - время "02:32"
- * @param {React.ReactNode} children - элементы рубрик (HeaderItem)
+ * @param {Array} props.rubrics - массив объектов рубрик (text, link)
  */
-const Header = ({ date, time, children }) => {
+const Header = ({ date, time, rubrics }) => {
   return (
     <div className="header">
-      {children}
+      {rubrics.map((item, idx) => (
+        <HeaderItem key={idx} text={item.text} link={item.link} />
+      ))}
       <span className="header__datetime">{date} {time}</span>
     </div>
   )
