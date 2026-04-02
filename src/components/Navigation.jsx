@@ -1,4 +1,5 @@
 import NavigationItem from "./NavigationItem";
+import { renderList } from "./utils";
 
 /**
  * Список новостей.
@@ -8,7 +9,7 @@ import NavigationItem from "./NavigationItem";
 const Navigation = ({ items }) => {
   return (
     <ul className="navigation-list">
-      {items.map((item, idx) => (
+      {renderList(items, (item, idx) => (
         <NavigationItem key={idx} text={item.text} link={item.link}></NavigationItem>
       ))}
     </ul>

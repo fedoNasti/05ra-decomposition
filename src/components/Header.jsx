@@ -1,4 +1,5 @@
 import HeaderItem from "./HeaderItem";
+import { renderList } from "./utils";
 
 /**
  * Шапка страницы: рубрики (СМИ, Германия, Рекомендуем) и текущее время.
@@ -10,7 +11,7 @@ import HeaderItem from "./HeaderItem";
 const Header = ({ date, time, rubrics }) => {
   return (
     <div className="header">
-      {rubrics.map((item, idx) => (
+      {renderList(rubrics, (item, idx) => (
         <HeaderItem key={idx} text={item.text} link={item.link} />
       ))}
       <span className="header__datetime">{date} {time}</span>

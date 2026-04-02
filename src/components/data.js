@@ -31,6 +31,14 @@ export const navItems = [
   { text: "ещё", link: "#" }
 ];
 
+export const weatherData = { icon: "🌧️", temp: "+17", text: "Утром +17, днем +20" }
+
+export const etherData = [
+  { icon: "📺", title: "Управление как искусство", channel: "Успех", link: "#" },
+  { icon: "📺", title: "Ночь. Мир в это время", channel: "earthTV", link: "#" },
+  { icon: "📺", title: "Андрей Возн...", channel: "Совершенно секретно", link: "#" }
+];
+
 export const visitedData = [
   { title: "Недвижимость", description: "о сталинках", link: "#" },
   { title: "Маркет", description: "люстры и светильники", link: "#" },
@@ -38,7 +46,7 @@ export const visitedData = [
 ];
 
 export const tvProgramData = [
-  { time: "02:00", title: "THT. Best", channel: "THT International" },
-  { time: "02:15", title: "Джинглики", channel: "Карусель INT" },
-  { time: "02:25", title: "Наедине со всеми", channel: "Первый" }
+  { time: "02:00", title: "THT. Best", channel: "THT International", link: "#" },
+  { time: "02:15", title: "Джинглики", channel: "Карусель INT", link: "#" },
+  { time: "02:25", title: "Наедине со всеми", channel: "Первый", link: "#" }
 ];

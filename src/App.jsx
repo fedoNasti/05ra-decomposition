@@ -15,8 +15,17 @@ import {
   exchangeData,
   navItems,
   visitedData,
-  tvProgramData
+  tvProgramData,
+  weatherData,
+  etherData
 } from './components/data'
+import Content from './components/Content'
+import ContentItem from './components/ContentItem'
+import Weather from './components/Weather'
+import Map from './components/Map'
+import VisitedList from './components/VisitedList'
+import TVProgramList from './components/TVProgramList'
+import EtherList from './components/EtherList'
 
 
 
@@ -29,6 +38,23 @@ function App() {
       <ExchangeRates items={exchangeData}></ExchangeRates>
       <Navigation items={navItems}></Navigation>
       <SearchBar></SearchBar>
+      <Content>
+        <ContentItem title='Погода' link='#'>
+          <Weather {...weatherData}></Weather>
+        </ContentItem>
+        <ContentItem title='Карта Германии' link='#'>
+          <Map text='Расписание' link='#'></Map>
+        </ContentItem>
+        <ContentItem title='Эфир' link='#'>
+          <EtherList programs={etherData}></EtherList>
+        </ContentItem>
+        <ContentItem title='Посещиемое' link='#'>
+          <VisitedList items={visitedData}></VisitedList>
+        </ContentItem>
+        <ContentItem title='Телепрограмма' link='#'>
+          <TVProgramList items={tvProgramData}></TVProgramList>
+        </ContentItem>
+      </Content>
     </>
   )
 }

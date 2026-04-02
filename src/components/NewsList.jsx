@@ -1,4 +1,5 @@
 import NewsItem from './NewsItem';
+import { renderList } from './utils';
 
 /**
  * Список новостей.
@@ -8,7 +9,7 @@ import NewsItem from './NewsItem';
 const NewsList = ({ news }) => {
   return (
     <ul className="news-list">
-      {news.map((item, idx) => (
+      {renderList(news, (item, idx) => (
         <NewsItem key={idx} icon={item.icon} text={item.text} link={item.link} />
       ))}
     </ul>

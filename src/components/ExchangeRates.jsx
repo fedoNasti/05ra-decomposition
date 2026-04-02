@@ -1,4 +1,5 @@
 import ExchangeRatesItem from "./ExchangeRateItem";
+import { renderList } from "./utils";
 
 /**
  * Список биржевых котировок.
@@ -8,7 +9,7 @@ import ExchangeRatesItem from "./ExchangeRateItem";
 const ExchangeRates = ({ items }) => {
   return (
     <ul className="exchange-list">
-      {items.map((item, idx) => (
+      {renderList(items, (item, idx) => (
         <ExchangeRatesItem key={idx} name={item.name} value={item.value} change={item.change}></ExchangeRatesItem>
       ))}
     </ul>
