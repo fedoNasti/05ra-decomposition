@@ -14,6 +14,8 @@ export const newsData = [
   { icon: "📰", text: "На Украине призвали создать ракеты для удара по Москве", link: "#" }
 ];
 
+export const bannerSmallData = { img: '#', url: '#', title: 'Работа над ошибками', text: 'Смотрите на Яндексе и запоминайте' };
+
 export const exchangeData = [
   { name: "USD MOEX", value: "63,52", change: "+0,09" },
   { name: "EUR MOEX", value: "70,86", change: "+0,14" },

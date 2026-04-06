@@ -2,7 +2,7 @@ import NavigationItem from "./NavigationItem";
 import { renderList } from "./utils";
 
 /**
- * Список новостей.
+ * Навигация сайта (Видео, Новости и тд).
  * @param {Object} props
  * @param {Array} props.items - массив объектов навигации (text, link)
  */

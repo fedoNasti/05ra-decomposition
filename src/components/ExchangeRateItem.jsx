@@ -1,5 +1,5 @@
 /**
- * Элемент навигации.
+ * Элемент информации о биржевых котировках.
  * @param {Object} props
  * @param {string} props.name - наименование валюты
  * @param {string} props.value - курс
@@ -8,9 +8,9 @@
 const ExchangeRatesItem = ({ name, value, change }) => {
   return (
     <li className="exchange-item">
-      <div className="exchange-item-name">{name}</div>
-      <div className="exchange-item-value">{value}</div>
-      <div className="exchange-item-change">{change}</div>
+      <span className="exchange-item-name">{name}</span>
+      <span className="exchange-item-value">{value}</span>
+      <span className="exchange-item-change">{change}</span>
     </li>
   );
 };
